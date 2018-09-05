@@ -11,11 +11,11 @@
 
     <!--远程调用的服务-->
     <!--check="false" 关闭某个服务的启动时检查 (没有提供者时报错)-->
-    <dubbo:reference interface="com.lbs.HelloService" id="helloService" check="false"/>
+    <dubbo:reference interface="com.lbs.HelloService" id="helloService" stub="com.lbs.HelloServiceStubImpl"/>
 
-    <!--关闭所有服务的启动时检查 (没有提供者时报错)-->
-    <dubbo:consumer check="false"/>
+    <!--&lt;!&ndash;关闭所有服务的启动时检查 (没有提供者时报错)&ndash;&gt;-->
+    <!--<dubbo:consumer check="false"/>-->
 
-    <!--关闭注册中心启动时检查 (注册订阅失败时报错)-->
-    <dubbo:registry check="false"/>
+    <!--&lt;!&ndash;关闭注册中心启动时检查 (注册订阅失败时报错)&ndash;&gt;-->
+    <!--<dubbo:registry check="false"/>-->
 </beans>
